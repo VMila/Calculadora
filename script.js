@@ -52,7 +52,11 @@ if(!evento.target.closest('button')) return
     resultado = primeiroNum * segundoNum    
     }
     if(operador == 'dividir'){
-    resultado = primeiroNum / segundoNum    
+    if(segundoNum == '0'){
+    resultado = 'ERRO'    
+    }else{     
+    resultado = primeiroNum / segundoNum  
+    }  
     }
     visor.textContent = resultado
    }
